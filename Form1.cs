@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace TheSnakeGame
 {
-    public partial class Form1 : Form
+    public partial class Game : Form
     {
-        public Form1()
+        Area area = new Area();
+        public Game()
         {
             InitializeComponent();
+            this.Controls.Add(area);
         }
-
     }
 }
