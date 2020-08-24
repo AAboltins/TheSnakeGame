@@ -13,14 +13,12 @@ namespace TheSnakeGame
         public Area()
         {
             InitializeArea();
-
         }
         private void InitializeArea()
         {
-            this.Height = 200;
-            this.Width = 200;
-            this.BackColor = Color.Black;
-
+            this.Height = 700;
+            this.Width = 1400;
+            this.Image = (Image)Properties.Resources.ResourceManager.GetObject($"GameZone");
         }
     }
 }
