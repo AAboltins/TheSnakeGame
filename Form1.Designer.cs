@@ -34,9 +34,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(1604, 450);
             this.Name = "Game";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Game_Load);
             this.ResumeLayout(false);
 
         }

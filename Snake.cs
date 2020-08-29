@@ -11,9 +11,10 @@ namespace TheSnakeGame
 {
     class Snake
     {
-        public int HorizontalVelocity { get; set; } = 0;
-        public int VerVelocity { get; set; } = 1;
+        public int HorizontalVelocity { get; set; } = 1;
+        public int VerVelocity { get; set; } = 0;
         public int Step { get; set; } = 20;
+        int i  = 0;
         public List<PictureBox> snakePixels = new List<PictureBox>();
         public Snake()
         {
@@ -21,20 +22,21 @@ namespace TheSnakeGame
         }
         private void InitializeSnake()
         {
+            AddPixel(200, 200);
             AddPixel(200, 220);
-            AddPixel(200, 240);
-            AddPixel(200, 260);
-            //InitializeSnakeTexture();
+            AddPixel(200, 230);
         }
-        public void AddPixel(int topLocation, int leftLocation)
+        public void AddPixel(int Left, int Top)
         {
+            //i++;
             PictureBox snakePixel;
             snakePixel = new PictureBox();
-            snakePixel.Top = topLocation;
-            snakePixel.Left = leftLocation;
+            snakePixel.BackColor = Color.Blue;
             snakePixel.Height = 20;
             snakePixel.Width = 20;
-            snakePixel.BackColor = Color.Blue;
+            snakePixel.Left = Left;
+            snakePixel.Top = Top;
+            //snakePixel.Name = "button" + i;
             snakePixels.Add(snakePixel);
         }
         public void Render(Form form) 
@@ -44,6 +46,10 @@ namespace TheSnakeGame
                 form.Controls.Add(sp);
                 sp.BringToFront();
             }
+        }
+        public void fd()
+        {
+            InitializeSnake();
         }
         private void InitializeSnakeTexture()
         {
